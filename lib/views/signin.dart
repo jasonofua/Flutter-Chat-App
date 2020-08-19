@@ -177,7 +177,7 @@ class _SignInState extends State<SignIn> {
                           child: Text(
                             "Register now",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: Colors.purple,
                                 fontSize: 16,
                                 decoration: TextDecoration.underline),
                           ),

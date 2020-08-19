@@ -71,53 +71,69 @@ class _ChatState extends State<Chat> {
         child: Stack(
           children: [
             chatMessages(),
-            Container(alignment: Alignment.bottomCenter,
-              width: MediaQuery
-                  .of(context)
-                  .size
-                  .width,
-              child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 24, vertical: 24),
-                color: Color(0x54FFFFFF),
-                child: Row(
-                  children: [
-                    Expanded(
-                        child: TextField(
-                          controller: messageEditingController,
-                          style: simpleTextStyle(),
-                          decoration: InputDecoration(
-                              hintText: "Message ...",
-                              hintStyle: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                              ),
-                              border: InputBorder.none
-                          ),
-                        )),
-                    SizedBox(width: 16,),
-                    GestureDetector(
-                      onTap: () {
-                        addMessage();
-                      },
-                      child: Container(
-                          height: 40,
-                          width: 40,
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                  colors: [
-                                    const Color(0x36FFFFFF),
-                                    const Color(0x0FFFFFFF)
-                                  ],
-                                  begin: FractionalOffset.topLeft,
-                                  end: FractionalOffset.bottomRight
-                              ),
-                              borderRadius: BorderRadius.circular(40)
-                          ),
-                          padding: EdgeInsets.all(12),
-                          child: Image.asset("assets/images/send.png",
-                            height: 25, width: 25,)),
+            Padding(
+              padding: const EdgeInsets.only(right: 15,left: 15,bottom: 20),
+              child: Container(alignment: Alignment.bottomCenter,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width,
+                child: Container(
+                  height: 50,
+                  decoration: BoxDecoration(
+                      borderRadius: new BorderRadius.only(
+                        topLeft: const Radius.circular(40.0),
+                        topRight: const Radius.circular(40.0),
+                        bottomLeft: const Radius.circular(40.0),
+                        bottomRight: const Radius.circular(40.0),
+                      ),
+                    border: Border.all(
+                      width: 1, //
+                      color: Colors.purple//                <--- border width here
+
                     ),
-                  ],
+                  ),
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+                  child: Row(
+                    children: [
+                      Expanded(
+                          child: TextField(
+                            controller: messageEditingController,
+                            style: simpleTextStyle(),
+                            decoration: InputDecoration(
+                                hintText: "Message ...",
+                                hintStyle: TextStyle(
+                                  color: Colors.blue,
+                                  fontSize: 16,
+                                ),
+                                border: InputBorder.none
+                            ),
+                          )),
+                      SizedBox(width: 16,),
+                      GestureDetector(
+                        onTap: () {
+                          addMessage();
+                        },
+                        child: Container(
+                            height: 40,
+                            width: 40,
+                            decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                    colors: [
+                                      const Color(0xFF9575CD),
+                                      const Color(0xFF9575CD)
+                                    ],
+                                    begin: FractionalOffset.topLeft,
+                                    end: FractionalOffset.bottomRight
+                                ),
+                                borderRadius: BorderRadius.circular(40)
+                            ),
+                            padding: EdgeInsets.all(12),
+                            child: Image.asset("assets/images/send.png",
+                              height: 25, width: 25,)),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -129,6 +145,8 @@ class _ChatState extends State<Chat> {
 
 }
 
+
+// widget representing chat bubble
 class MessageTile extends StatelessWidget {
   final String message;
   final bool sendByMe;
@@ -167,8 +185,8 @@ class MessageTile extends StatelessWidget {
                 const Color(0xff2A75BC)
               ]
                   : [
-                const Color(0x1AFFFFFF),
-                const Color(0x1AFFFFFF)
+                const Color(0xFFB388FF),
+                const Color(0xFFB388FF)
               ],
             )
         ),
