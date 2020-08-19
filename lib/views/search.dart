@@ -81,14 +81,14 @@ class _SearchState extends State<Search> {
               Text(
                 userName,
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.purple,
                     fontSize: 16
                 ),
               ),
               Text(
                 userEmail,
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.purple,
                     fontSize: 16
                 ),
               )
@@ -107,7 +107,7 @@ class _SearchState extends State<Search> {
               ),
               child: Text("Message",
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.purple,
                     fontSize: 16
                 ),),
             ),
@@ -146,7 +146,7 @@ class _SearchState extends State<Search> {
           children: [
             Container(
               padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-              color: Color(0x54FFFFFF),
+              color: Colors.black26,
               child: Row(
                 children: [
                   Expanded(
@@ -156,7 +156,7 @@ class _SearchState extends State<Search> {
                       decoration: InputDecoration(
                         hintText: "search username ...",
                         hintStyle: TextStyle(
-                          color: Colors.white,
+                          color: Colors.purple,
                           fontSize: 16,
                         ),
                         border: InputBorder.none
@@ -173,8 +173,8 @@ class _SearchState extends State<Search> {
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
                             colors: [
-                              const Color(0x36FFFFFF),
-                              const Color(0x0FFFFFFF)
+                              const Color(0xFF9575CD),
+                              const Color(0xFF9575CD)
                             ],
                             begin: FractionalOffset.topLeft,
                             end: FractionalOffset.bottomRight
