@@ -20,6 +20,8 @@ class _SearchState extends State<Search> {
   bool isLoading = false;
   bool haveUserSearched = false;
 
+  //Function searching the firestore db for username being inputted
+
   initiateSearch() async {
     if(searchEditingController.text.isNotEmpty){
       setState(() {
@@ -36,6 +38,8 @@ class _SearchState extends State<Search> {
       });
     }
   }
+
+  //widget returning a listview containing search results
 
   Widget userList(){
     return haveUserSearched ? ListView.builder(

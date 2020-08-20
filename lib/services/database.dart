@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class DatabaseMethods {
+
+  // registering a user after signing up
   Future<void> addUserInfo(userData) async {
     Firestore.instance.collection("users").add(userData).catchError((e) {
       print(e.toString());
@@ -16,6 +18,9 @@ class DatabaseMethods {
       print(e.toString());
     });
   }
+
+
+  //
 
   searchByName(String searchField) {
     return Firestore.instance

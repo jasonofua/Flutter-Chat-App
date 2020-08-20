@@ -16,7 +16,7 @@ void main() {
 class MyApp extends StatefulWidget {
   // This widget is the root of your application.
   static final style = TextStyle(
-    fontSize: 30,
+    fontSize: 18,
     fontFamily: "Billy",
     fontWeight: FontWeight.w600,
   );
@@ -61,11 +61,11 @@ class _MyAppState extends State<MyApp> {
                 style: MyApp.style,
               ),
               Text(
-                "It's Me",
+                "I thought adding this",
                 style: MyApp.style,
               ),
               Text(
-                "Sahdeep",
+                "Would be cool",
                 style: MyApp.style,
               ),
             ],
@@ -123,15 +123,15 @@ class _MyAppState extends State<MyApp> {
           Column(
             children: <Widget>[
               Text(
-                "Liked?",
+                "Like?",
                 style: MyApp.style,
               ),
               Text(
-                "Fork!",
+                "Thanks",
                 style: MyApp.style,
               ),
               Text(
-                "Give Star!",
+                "Click go to chat to continue",
                 style: MyApp.style,
               ),
             ],
@@ -213,7 +213,7 @@ class _MyAppState extends State<MyApp> {
             Align(
               alignment: Alignment.bottomRight,
               child: Padding(
-                padding: const EdgeInsets.all(25.0),
+                padding: const EdgeInsets.only(left: 35,bottom: 30),
                 child: FlatButton(
                   onPressed: () {
                     userIsLoggedIn != null ?  userIsLoggedIn ?  navigatorKey.currentState.pushReplacement(
@@ -250,9 +250,7 @@ class _MyAppState extends State<MyApp> {
     setState(() {
       page = lpage;
     });
-    if(page == 2){
 
-    }
   }
 }
 

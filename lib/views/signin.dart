@@ -1,9 +1,7 @@
 import 'package:chatapp/helper/helperfunctions.dart';
-import 'package:chatapp/helper/theme.dart';
 import 'package:chatapp/services/auth.dart';
 import 'package:chatapp/services/database.dart';
 import 'package:chatapp/views/chatrooms.dart';
-import 'package:chatapp/views/forgot_password.dart';
 import 'package:chatapp/widget/widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -111,26 +109,7 @@ class _SignInState extends State<SignIn> {
                     SizedBox(
                       height: 16,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ForgotPassword()));
-                          },
-                          child: Container(
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: 16, vertical: 8),
-                              child: Text(
-                                "Forgot Password?",
-                                style: simpleTextStyle(),
-                              )),
-                        )
-                      ],
-                    ),
+
                     SizedBox(
                       height: 16,
                     ),

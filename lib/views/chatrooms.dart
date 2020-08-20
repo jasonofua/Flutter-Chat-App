@@ -16,6 +16,8 @@ class ChatRoom extends StatefulWidget {
 class _ChatRoomState extends State<ChatRoom> {
   Stream chatRooms;
 
+
+  // widget (stream) which fetchs the chatlist from firestore and return a stream builder
   Widget chatRoomsList() {
     return StreamBuilder(
       stream: chatRooms,
@@ -43,6 +45,8 @@ class _ChatRoomState extends State<ChatRoom> {
     getUserInfogetChats();
     super.initState();
   }
+
+  // function get user chats and info
 
   getUserInfogetChats() async {
     Constants.myName = await HelperFunctions.getUserNameSharedPreference();
